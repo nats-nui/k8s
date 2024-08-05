@@ -1,0 +1,59 @@
+nameOverride: ""
+fullnameOverride: ""
+
+image:
+  repository: ghcr.io/nats-nui/nui
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+replicaCount: 1
+
+
+podAnnotations: {}
+podLabels: {}
+
+
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+service:
+  type: ClusterIP
+  port: 31311
+
+ingress:
+  enabled: false
+  className: "nginx"
+  annotations: {}
+  hosts:
+    - host: nui.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+resources: {}
+
+credsVolume:
+  name: secret-creds-volume # Name of the Kubernetes Secret
+
+  # Add more files as needed. All the creds added are mapped into the /creds of the container
+  # and can be used from the UI with that path
+  items:
+    - key: creds1
+      path: creds1.creds
+
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
