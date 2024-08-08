@@ -1,4 +1,4 @@
-## Nui on K8s
+## NUI on K8S
 
 This repo manage the K8s deploy of NUI and publishes the related helm chart.
 Current version of NUI on K8s deploys:
