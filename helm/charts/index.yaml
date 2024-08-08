@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  nui:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2024-08-08T06:45:07.733316435Z"
+    description: NATS Free and open source UI
+    digest: f15eff74111a04489ebb20c90bc53e03bcbf76ee629ff85e34f3a176b2f54874
+    name: nui
+    type: application
+    urls:
+    - https://github.com/nats-nui/k8s/releases/download/nui-0.1.0/nui-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-08-08T06:45:07.733328107Z"
