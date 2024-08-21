@@ -10,7 +10,7 @@ Current version of NUI on K8s deploys:
 ## Getting started
 ```
 helm repo add nats-nui https://nats-nui.github.io/k8s/helm/charts
-helm install nats-nui/nui
+helm install nats-nui nats-nui/nui
 ```
 
 ## Customization
