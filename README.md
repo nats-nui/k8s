@@ -14,4 +14,4 @@ helm install nats-nui nats-nui/nui
 ```
 
 ## Customization
-Check `values.yaml` to customize enable ingress and customize the install
+Check `values.yaml` to enable ingress and customize the install
