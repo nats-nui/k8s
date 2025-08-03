@@ -5,6 +5,7 @@ metadata:
   labels:
     {{- include "nui-k8s.labels" . | nindent 4 }}
 spec:
+  serviceName: {{ include "nui-k8s.fullname" . }}  # Add this line
   replicas: 1
   selector:
     matchLabels:
