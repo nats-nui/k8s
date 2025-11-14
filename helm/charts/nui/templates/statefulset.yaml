@@ -63,6 +63,9 @@ spec:
             - name: cli-contexts
               mountPath: /cli-contexts
               readOnly: true
+          {{- with .Values.volumeMounts }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
       volumes:
         - name: creds-volume
           secret:
@@ -73,6 +76,9 @@ spec:
               - key: {{ .key }}
                 path: {{ .path }}
             {{- end }}
+      {{- with .Values.volumes }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
         - name: cli-contexts
           secret:
             optional: true
